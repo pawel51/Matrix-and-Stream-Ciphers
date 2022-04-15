@@ -152,7 +152,15 @@ namespace Ciphers
             // konwersja na int-y
             for (int i = 0; i < colNumbers.Length; i++)
             {
-                keyArray[i] = Convert.ToInt32(colNumbers[i]);
+                try
+                {
+                    keyArray[i] = Convert.ToInt32(colNumbers[i]);
+                }
+                catch (System.FormatException exception)
+                {
+                    MessageBox.Show("Correct format is '4-2-3-1' (order of columns from 1 to 4)");
+                    return "key format error";
+                }
             }
 
             // szerokość do długość klucza
