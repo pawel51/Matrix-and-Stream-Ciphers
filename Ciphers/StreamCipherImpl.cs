@@ -36,6 +36,15 @@ namespace Ciphers
             }
         }
 
+        /// <summary>
+        /// Tworzy generator LFSR o danym stopniu wielomianu 'degree', następnie dodaje bramki xor 
+        /// przy bitach podanych w parametrze 'polymonial' (1001 -> wstaw xor przy bicie pierwszy i czwartym)
+        /// Początkowe ustawienie bufora określa tablica 'seed'
+        /// </summary>
+        /// <param name="degree">stopień szyfrującego wielomianu LFSR</param>
+        /// <param name="seed">początkowe ustawienie bufora</param>
+        /// <param name="polymonial">określa wielomian szyfrujący</param>
+        /// <returns>Zwraca wygenerowany ciąg bitów pseudolosowych</returns>
         private int[] GenerateLFSR(int degree, int[] seed, int[] polymonial)
         {
 
@@ -69,9 +78,9 @@ namespace Ciphers
         /// Szyfruje inputStream za pomocą pseudolosowego generatora LFSR
         /// o długości = 'degree' zaczynając od ustawienia 'seed'
         /// </summary>
-        /// <param name="inputStream"></param>
-        /// <param name="seed"></param>
-        /// <param name="degree"></param>
+        /// <param name="inputStream">ciąg do zaszyfrowania</param>
+        /// <param name="seed">pozycja początkowa bufora</param>
+        /// <param name="degree">stopień wielomianu szyfrującego</param>
         /// <returns>Zwraca zaszyfrowany ciąg bitów tj. tablicę intów 0 lub 1 </returns>
         public int[]? StreamCipher(int[] inputStream, int[] seed, int degree)
         {
