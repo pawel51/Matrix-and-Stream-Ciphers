@@ -42,3 +42,22 @@ określa kolejność odczytywania pełnych kolumn z macierzy.
 3. Wpisz tekst do zaszyfrowania i naciśnij encrypt.
 4. Aby odszyfrować naciśnij copy, a następnie decrypt.
 
+# Szyfr strumieniowy oparty o generato LFSR (linear-feedback shift register)
+
+![encrypted](docs/stream1.PNG)
+
+![decrypted](docs/stream2.PNG)
+
+## Instrukcja korzystania z GUI
+
+1. Wprowadź ciąg bitów o dowolnej długości w pole 'Input'
+2. Wpisz ciąg bitów określający początkowe nastawienie generatora w pole 'seed' (długość od 1-9)
+3. Ustal długość wielomianu szyfrującego (stopień odpowiada długości ciągu seed od 1 do 9) np. 10010 to 'degree' = 5
+4. Kliknij 'Pipe' w celu szyfracji.
+5. Skopiuj output i wklej w input. Ponownie kliknij Pipe w celu Deszyfracji
+
+## Zasada działania
+LFSR wygeneruje ten sam ciąg bitów jeżeli seed będzie jednakowy. Dla każdego bitu z input i bitu wygenerowanego stosuję operację xor. Wynik dodaje do wyjścia.
+Dzięki odwrotności działania 'xor' ciąg zaszyfrowany można zdeszyfrować posiadając te same ustawienia szyfru.
+
+
