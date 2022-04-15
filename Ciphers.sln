@@ -9,8 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiphersTests", "CiphersTest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{74FF81EB-6914-4CCA-999D-1DA9EC9C4EC9}"
 	ProjectSection(SolutionItems) = preProject
+		docs\zad1.PNG = docs\zad1.PNG
 		docs\zad1screen.PNG = docs\zad1screen.PNG
+		docs\zad2a.PNG = docs\zad2a.PNG
 		docs\zad2aScreen.PNG = docs\zad2aScreen.PNG
+		docs\zad2b.PNG = docs\zad2b.PNG
 		docs\zad2bScreen.PNG = docs\zad2bScreen.PNG
 	EndProjectSection
 EndProject
