@@ -65,6 +65,14 @@ namespace Ciphers
             return buffer;
         }
 
+        /// <summary>
+        /// Szyfruje inputStream za pomocą pseudolosowego generatora LFSR
+        /// o długości = 'degree' zaczynając od ustawienia 'seed'
+        /// </summary>
+        /// <param name="inputStream"></param>
+        /// <param name="seed"></param>
+        /// <param name="degree"></param>
+        /// <returns>Zwraca zaszyfrowany ciąg bitów tj. tablicę intów 0 lub 1 </returns>
         public int[]? StreamCipher(int[] inputStream, int[] seed, int degree)
         {
             // Wczytanie tablicy których stopni wielomianu użyć
